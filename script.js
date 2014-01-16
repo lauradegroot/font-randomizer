@@ -8,6 +8,14 @@ $.fn.fontmix = function(){
 	var divClass = this.prop("nodeName").toLowerCase();
 	
 	this.append("<div class='"+divClass+"'>"+text+"</div>");
+
+	var everyOther = function(){
+		$("."+divClass+" span:odd").addClass("mr");
+		$("."+divClass+" span:even").addClass("mrs");
+	};
+	
+
+	everyOther();
 	
 	return this;
 
